@@ -1,7 +1,8 @@
 <?php
 function main()
 {
-  echo 'alright';
+header("Location: https://google.com");
+die();
 }
 
 // require "config.php";
