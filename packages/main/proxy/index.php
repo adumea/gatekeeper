@@ -2,7 +2,6 @@
 function main()
 {
 header("Location: https://google.com");
-die();
 }
 
 // require "config.php";
