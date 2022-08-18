@@ -1,5 +1,9 @@
 <?php
-echo 'alright';
+public function main()
+{
+  echo 'alright';
+}
+
 // require "config.php";
 
 // if(PROXY_SUBFOLDER != '')
