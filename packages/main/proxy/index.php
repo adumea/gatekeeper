@@ -1,5 +1,5 @@
 <?php
-public function main()
+function main()
 {
   echo 'alright';
 }
