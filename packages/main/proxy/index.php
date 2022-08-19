@@ -17,7 +17,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
  
     var_dump($output);
     return [
-        'body' => $output,
+        'body' => $_POST,
     ];
 }
 
