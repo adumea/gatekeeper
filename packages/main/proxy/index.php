@@ -1,23 +1,31 @@
 <?php
-function main(array $args) : array
+function main()
 {
-    $url = $args["dst"] ?? "https://chat.modig.app/api/subscribers/activate";
-    
+$url = $_GET['dst'];
+$postData = $_GET;
+$test = json_encode($_POST);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $data = '{"dst": "https://qr.modig.app/qrCode/get-code", "pid": "3b35d29f32ee432d8a715424749c3073", "productName": "Cool hat", "productNumber":"SW10000", "storefrontUrl": "https://modig.arnia.ro"}';
 
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $test);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $headers = array(
+        "Content-Type: application/json",
+    );
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         // $output contains the output string
         $output = curl_exec($ch);
 
         // close curl resource to free up system resources
         curl_close($ch); 
  
-    var_dump($output);
     return [
-        'body' => $_POST,
+        'body' => $output,
     ];
 }
 
