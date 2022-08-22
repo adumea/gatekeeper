@@ -1,8 +1,8 @@
 <?php
 function main()
 {
-$url = $_GET['dst'];
-$postData = $_GET;
+$url = $_POST['dst'];
+$postData = $_POST;
 $test = json_encode($_POST);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
