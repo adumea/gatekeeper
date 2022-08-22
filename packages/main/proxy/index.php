@@ -3,7 +3,13 @@ function main()
 {
 $url = $_GET['dst'] ?? "https://qr.modig.app/qrCode/get-code";
 $postData = $_GET;
-$test = json_encode($_POST);
+    $_POST['dst'] = "https://qr.modig.app/qrCode/get-code";
+    $_POST['pid'] = "3b35d29f32ee432d8a715424749c3073";
+    $_POST['productName'] = "Cool hat";
+    $_POST['productNumber'] = "SW10000";
+    $_POST['storefrontUrl'] = "https://modig.arnia.ro";
+    $test = json_encode($_POST);
+
     var_dump($_POST);
     var_dump($_GET);
     var_dump($_REQUEST);
