@@ -3,6 +3,8 @@ function main()
 {
 $url = $_GET['dst'] ?? "https://qr.modig.app/qrCode/get-code";
 $postData = $_GET;
+    var_dump($_GET);
+    VAR_DUMP($_POST);
 $test = json_encode($_POST);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
