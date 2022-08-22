@@ -6,6 +6,7 @@ $postData = $_GET;
 $test = json_encode($_POST);
     var_dump($_POST);
     var_dump($_GET);
+    var_dump($_REQUEST);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, 1);
