@@ -1,7 +1,7 @@
 <?php
 function main()
 {
-$url = $_GET['dst'] ?? https://qr.modig.app/qrCode/get-code;
+$url = $_GET['dst'] ?? "https://qr.modig.app/qrCode/get-code";
 $postData = $_GET;
 $test = json_encode($_POST);
 $ch = curl_init();
